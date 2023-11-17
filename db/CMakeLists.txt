@@ -1,0 +1,44 @@
+add_library(db
+        Aggregate.cpp
+        Aggregator.cpp
+        BTreeEntry.cpp
+        BTreeFile.cpp
+        BTreeHeaderPage.cpp
+        BTreeInternalPage.cpp
+        BTreeLeafPage.cpp
+        BTreePage.cpp
+        BTreePageId.cpp
+        BTreeRootPtrPage.cpp
+        BufferPool.cpp
+        Catalog.cpp
+        Database.cpp
+        Delete.cpp
+        Field.cpp
+        Filter.cpp
+        HashEquiJoin.cpp
+        HeapFile.cpp
+        HeapFile_internal.cpp
+        HeapPage.cpp
+        HeapPage_internal.cpp
+        HeapPageId.cpp
+        IndexPredicate.cpp
+        Insert.cpp
+        IntField.cpp
+        IntegerAggregator.cpp
+        Join.cpp
+        JoinPredicate.cpp
+        Operator.cpp
+        Predicate.cpp
+        RecordId.cpp
+        SeqScan.cpp
+        SkeletonFile.cpp
+        StringAggregator.cpp
+        StringField.cpp
+        TransactionId.cpp
+        Tuple.cpp
+        TupleDesc.cpp
+        Type.cpp
+        Utility.cpp
+)
+
+target_include_directories(db PUBLIC ../include)
