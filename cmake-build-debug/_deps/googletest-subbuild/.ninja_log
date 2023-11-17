@@ -1,0 +1,21 @@
+# ninja log v5
+0	54	1700150516210851110	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	b8314b7c7ee9b8a8
+0	54	1700150516210851110	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	b8314b7c7ee9b8a8
+55	1471	1700150517628130374	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	274980186f61d63e
+55	1471	1700150517628130374	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	274980186f61d63e
+1471	1503	1700150517659756771	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	66e871e018eb06f8
+1471	1503	1700150517659756771	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	66e871e018eb06f8
+1503	1527	1700150517684814059	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	67d900fff0030664
+1503	1527	1700150517684814059	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	67d900fff0030664
+1527	1552	1700150517709528752	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3848dcc6cb76819e
+1527	1552	1700150517709528752	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3848dcc6cb76819e
+1552	1575	1700150517732787277	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	14230df7af001547
+1552	1575	1700150517732787277	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	14230df7af001547
+1575	1597	1700150517754469830	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	49fecaf9a9f6d3e8
+1575	1597	1700150517754469830	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	49fecaf9a9f6d3e8
+1597	1618	1700150517776039737	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	e68ae7d94e0f7246
+1597	1618	1700150517776039737	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	e68ae7d94e0f7246
+1618	1650	1700150517807313424	CMakeFiles/googletest-populate-complete	237db28d8c29c3d8
+1618	1650	1700150517807313424	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	237db28d8c29c3d8
+1618	1650	1700150517807313424	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	237db28d8c29c3d8
+1618	1650	1700150517807313424	/Users/chen/Desktop/cs660-pa/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	237db28d8c29c3d8
