@@ -11,6 +11,10 @@ namespace db {
  */
     class Insert : public Operator {
         // TODO pa3.3: add private members
+        TransactionId transactionId;
+        DbIterator *c;
+        int tid;
+
     protected:
         /**
          * Inserts tuples read from child into the tableId specified by the
