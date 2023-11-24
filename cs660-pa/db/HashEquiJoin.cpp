@@ -68,16 +68,21 @@ void HashEquiJoin::setChildren(std::vector<DbIterator *> children) {
 
 std::optional<Tuple> HashEquiJoin::fetchNext() {
     // TODO pa3.1: some code goes here
-    while (c1->hasNext()) {
-        Tuple tuple1 = c1->next();
-        while (c2->hasNext()) {
+    static std::optional<Tuple> leftTuple = std::nullopt;
+
+    while (true) {
+        if (!leftTuple.has_value() && c1->hasNext()) {
+            leftTuple = c1->next();
+        }
+        while (leftTuple.has_value() && c2->hasNext()) {
             Tuple tuple2 = c2->next();
-            if (joinPredicate.filter(&tuple1, &tuple2)) {
+            if (joinPredicate.filter(&leftTuple.value(), &tuple2)) {
                 TupleDesc mergedDesc = getTupleDesc();
                 Tuple joinedTuple(mergedDesc);
                 int index = 0;
-                for (int i = 0; i < tuple1.getTupleDesc().numFields(); ++i) {
-                    joinedTuple.setField(index++, &tuple1.getField(i));
+                // merge the tuple
+                for (int i = 0; i < leftTuple.value().getTupleDesc().numFields(); ++i) {
+                    joinedTuple.setField(index++, &leftTuple.value().getField(i));
                 }
                 for (int j = 0; j < tuple2.getTupleDesc().numFields(); ++j) {
                     joinedTuple.setField(index++, &tuple2.getField(j));
@@ -85,7 +90,14 @@ std::optional<Tuple> HashEquiJoin::fetchNext() {
                 return joinedTuple;
             }
         }
-        c2->rewind();
+        // rewind
+        if (!c2->hasNext()) {
+            c2->rewind();
+            // no match -> reset the leftTuple
+            leftTuple = std::nullopt;
+        }
+        if (!leftTuple.has_value() && !c1->hasNext()) {
+            return std::nullopt;
+        }
     }
-    return std::nullopt;
 }
