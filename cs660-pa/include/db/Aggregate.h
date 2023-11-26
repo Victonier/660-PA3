@@ -16,6 +16,11 @@ namespace db {
      */
     class Aggregate : public Operator {
         // TODO pa3.2: add private members
+        DbIterator *child;
+        int afield;
+        int gfield;
+        Aggregator::Op aop;
+        DbIterator *DbIter;
     protected:
         /**
          * Returns the next tuple. If there is a group by field, then the first
