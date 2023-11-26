@@ -3,7 +3,8 @@
 
 #include <db/Aggregator.h>
 #include <optional>
-
+#include <unordered_map>
+#include "IntField.h"
 namespace db {
 
 /**
@@ -11,7 +12,15 @@ namespace db {
  */
     class IntegerAggregator : public Aggregator {
         // TODO pa3.2: add private members
+        int gbfield;
+        std::optional<Types::Type> gbfieldtype;
+        int afield;
+        Op what;
+        std::unordered_map<Field *, int> countMap;
+        std::unordered_map<Field *, int> vMap;
     public:
+
+        inline static Field * NO_GROUP_KEY=new IntField(0);
         /**
          * Aggregate constructor
          *

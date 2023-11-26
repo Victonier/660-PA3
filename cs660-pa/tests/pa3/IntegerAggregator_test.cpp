@@ -21,8 +21,8 @@ TEST(IntegerAggregatorTest, test) {
         agg.mergeTupleIntoGroup(&tup);
     }
     ss1.close();
-    auto agg_it = agg.iterator();
 
+    auto agg_it = agg.iterator();
     int i = 0;
     agg_it->open();
     while (agg_it->hasNext()) {
