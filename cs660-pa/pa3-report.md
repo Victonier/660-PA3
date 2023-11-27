@@ -12,6 +12,7 @@
 - *(Describe any design decisions you made.)*
 - **Filter**: To fetchNext, it iterates over tuples from the child iterator and applies the predicate to filter data.
 - **Join**: It's a nested loop join method. It iterates over tuples from both child iterators, applies the join predicate, and constructs a new tuple that merges fields from both input tuples when the predicate is satisfied.
+- **Integer Aggregator**:  Integer aggregator class implements the function to calculate different operators when grouping by using two maps to calculate necessary information: count times and cumulative values, and pass that to the iterator.
 - **Insert and Deletion**:  This operator efficiently implements insert and delete queries by either inserting new tuples into a specified table using the BufferPool's insertTuple method, or deleting existing tuples from the same table using the BufferPool's deleteTuple method, based on the tuples it receives from its child operator.
 
 ## API Changes
@@ -25,6 +26,7 @@
 ## Time and Challenges
 - *(Describe how long you spent on the assignment, and whether there was anything you found particularly difficult or confusing.)*
 - **Duration**: 
+Exercise 2:  3 days. Difficult part is Iterator implementation.
 - **Challenges**: The simple nested loop join method used in join function, while straightforward, can be inefficient for large datasets, as it iterates over every tuple pair, leading to higher computational costs.
 
 ## Collaboration
